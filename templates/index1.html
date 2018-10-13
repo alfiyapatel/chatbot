@@ -1,0 +1,43 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+    <script>
+        function setStatus(newstatus)
+        {
+          $("#bot").removeClass("speaking thinking");
+          $("#bot").addClass(newstatus);
+        }
+    
+    </script>  
+</head>
+    
+<body>
+
+<div id="container">
+  <div id="bot" class="neutral">
+    <div id="head">
+      <div id="left-ear">
+        <div id="left-ear-inner"></div>
+      </div>
+      <div id="face">
+        <div id="eyes">
+          <div id="left-eye"></div>
+          <div id="right-eye"></div>
+        </div>
+        <div id="mouth"></div>
+      </div>
+      <div id="right-ear">
+        <div id="right-ear-inner"></div>
+      </div>
+    </div>
+  </div>
+  <ul id="switches">
+    <li class="neutral" onmouseover="setStatus('')"> Neutral </li>
+    <li class="speaking" onmouseover="setStatus('speaking')"> Speaking </li> 
+    <li class="waiting" onmouseover="setStatus('thinking')"> Thinking </li>   
+  </ul>
+</div>
+
+    
+</body>  
+</html>
